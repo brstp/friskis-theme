@@ -9,6 +9,15 @@ define('THEMELIB', TEMPLATEPATH . '/lib');
 
 load_theme_textdomain( 'friskis-svettis', TEMPLATEPATH.'/languages' );
 
+# Advanced Custom Fields are included in this premium theme and may
+# be re-distributed together with the theme as long according to the
+# license. http://www.advancedcustomfields.com/
+
+define( 'ACF_LITE', true );
+include_once('advanced-custom-fields/acf.php');
+include_once('acf-repeater/acf-repeater.php');
+
+# /ACF
 
 register_nav_menus( array(
         'primary' => __( 'Primär navigation', 'primary' ),

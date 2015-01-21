@@ -5,19 +5,14 @@ Apart from the theme there are some nice to have files in the jumpstart director
 
 Installation:
 
-Install the theme.
-Install plugin Advanced Custom Fields.
-Install plugin ACF Repeater.
-Install plugin Wordpress Importer.
-
-Import xml file to create custom fields.
+Install the theme zip file.
 
 Create a start page. I assume it's called "Start"
 
 Settings:
 
 General > Site Title: The name of the club.
-General > Taglinge: #empty
+General > Tagline: #empty
 Reading > Front page displays: A static page: "Start"
 
 Media > Thumbnail size: 260x135, crop
@@ -40,13 +35,14 @@ Bildstorlek: Image size
 Bild: Image
 Sidlänk: Page to link to
 Alt: Alt tag for the image
-
-
 Puffar: Teasers
 Rubrik: Header
 
 
 Copy favicon.ico to web server root.
 
+The main menu must be named "Primär navigation".
+Tha footer menu must me named "Sidfotsmeny".
+(Yes. It's ugly.)
 
 
