@@ -11,7 +11,7 @@ Installation:
 
 Install the theme zip file.
 
-Create a start page. I assume it's called "Start"
+Create a start page. I assume it's called "Start". Use page template = "Start".
 
 Settings:
 
@@ -48,5 +48,20 @@ Copy favicon.ico to web server root.
 The main menu must be named "Primär navigation".
 Tha footer menu must me named "Sidfotsmeny".
 (Yes. It's ugly.)
+
+
+There are three widget panels:
+Sidbar: left column on sub pages.
+Sidfot 1: Page foot, left
+Sidfot 2: Page foot, right
+
+On pages there are a right column visible on wide screens. On narrow screens, this column is hidden. We primarily use it for images. The column is edited in an own editing field of the page.
+
+
+The admin pages are in Swedish, mostly hard coded. Thanks to F&S Luxembourg, there is an English translation of the frontend. If you translate, please bransch and send a pull request, to let others use the translation.
+
+The theme is hosted at: https://github.com/brstp/friskis-theme. Improvements are appreciated. Please branch and send pull request.
+
+
 
 
