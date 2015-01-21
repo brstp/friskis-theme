@@ -3,6 +3,10 @@ Originally developed by the web agency Strop or a group och Friskis&Svettis club
 
 Apart from the theme there are some nice to have files in the jumpstart directory.
 
+# Advanced Custom Fields are included in this premium theme and may
+# be re-distributed together with the theme as long according to the
+# license. http://www.advancedcustomfields.com/
+
 Installation:
 
 Install the theme zip file.
