@@ -1,5 +1,5 @@
 Wordpress theme for Friskis&Svettis
-Originally developed by the web agency Strop or a group och Friskis&Svettis clubs in the Stockholm region. Maintained by stefan.pettersson@lumano.se, +46 733 12 55 55.
+Originally developed by the web agency Strop or a group och Friskis&Svettis clubs in the Stockholm region. The theme is currently maintained by stefan.pettersson@lumano.se, +46 733 12 55 55.
 
 Apart from the theme there are some nice to have files in the jumpstart directory.
 
@@ -11,9 +11,10 @@ Installation:
 
 Install the theme zip file.
 
-Create a start page. I assume it's called "Start". Use page template = "Start".
+There is a xml file to import in the jumpstart directory to create a start page, a sample news article and menus. Use the Wordpress importer. That xml file is provided "as-is".
 
-Settings:
+
+Recommendend settings:
 
 General > Site Title: The name of the club.
 General > Tagline: #empty
@@ -29,6 +30,7 @@ Friskis&Svettis > Förening (Club): The name of the club
 Friskis&Svettis > Facebook-konto (Facebook account): Part of the url to a facebook page, everything after the domain name, excluding the initial slash.
 Friskis&Svettis > Facebook-konto (Twitter account): The twitter handle (without "@").
 
+Create a start page (or import from xml file). I assume it's called "Start". Use page template = "Start".
 
 On the page "Start" the slider and three teasers are published by editors. Use exact image sizes. Sample files are available in the jumpstart directory. Always use one or more sliders and exactly three teasers. Use the "Add row" buttons to add more slider images or teasers.
 
@@ -61,7 +63,5 @@ On pages there are a right column visible on wide screens. On narrow screens, th
 The admin pages are in Swedish, mostly hard coded. Thanks to F&S Luxembourg, there is an English translation of the frontend. If you translate, please bransch and send a pull request, to let others use the translation.
 
 The theme is hosted at: https://github.com/brstp/friskis-theme. Improvements are appreciated. Please branch and send pull request.
-
-
 
 
