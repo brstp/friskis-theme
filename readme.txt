@@ -11,7 +11,11 @@ Installation:
 
 Install the theme zip file.
 
-There is a xml file to import in the jumpstart directory to create a start page, a sample news article and menus. Use the Wordpress importer. That xml file is provided "as-is".
+There are two xml files to import from the jumpstart directory.
+- Advanced Custom Fields definitions.
+- Sample content to create a start page, a sample news article and menus. Use the Wordpress importer. That xml file is provided "as-is".
+
+Copy the directories advanced-custom-fields and acf-repeater from the theme to the wp-content/plugins directory.
 
 
 Recommendend settings:
