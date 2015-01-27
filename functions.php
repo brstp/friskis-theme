@@ -13,6 +13,8 @@ load_theme_textdomain( 'friskis-svettis', TEMPLATEPATH.'/languages' );
 # be re-distributed together with the theme as long according to the
 # license. http://www.advancedcustomfields.com/
 
+# Uncomment three rows below to use ACF included within the theme.
+
 #define( 'ACF_LITE', true );
 #include_once('advanced-custom-fields/acf.php');
 #include_once('acf-repeater/acf-repeater.php');
@@ -887,6 +889,261 @@ function custom_register_widget_recent_comments() {
 
 add_action( 'widgets_init', 'custom_register_widget_recent_comments' );
 
+# Uncomment code snippet below to add ACF when theme is activated.
 
+/* 
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_bildspel',
+		'title' => 'Bildspel',
+		'fields' => array (
+			array (
+				'key' => 'field_1',
+				'label' => 'Bildspel',
+				'name' => 'image-slider',
+				'type' => 'repeater',
+				'instructions' => 'Bildstorlek: 1000x400px.',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_2',
+						'label' => 'Bild',
+						'name' => 'image',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'url',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_3',
+						'label' => 'Sidlänk',
+						'name' => 'page-link',
+						'type' => 'page_link',
+						'column_width' => '',
+						'post_type' => array (
+							0 => 'post',
+							1 => 'page',
+						),
+						'allow_null' => 0,
+						'multiple' => 0,
+					),
+					array (
+						'key' => 'field_17',
+						'label' => 'Alt',
+						'name' => 'alt',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_18',
+						'label' => 'Title',
+						'name' => 'title',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => '',
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-home.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_hogerspalt',
+		'title' => 'Högerspalt',
+		'fields' => array (
+			array (
+				'key' => 'field_3',
+				'label' => 'Högerspalt',
+				'name' => 'sidebar-right',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'default',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 1,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'fs_news',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_puffar-startsida',
+		'title' => 'Puffar startsida',
+		'fields' => array (
+			array (
+				'key' => 'field_2',
+				'label' => 'Puffar',
+				'name' => 'boxes',
+				'type' => 'repeater',
+				'instructions' => 'Bildstorlek: 200x175px',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5',
+						'label' => 'Bild',
+						'name' => 'image',
+						'type' => 'image',
+						'column_width' => '',
+						'save_format' => 'url',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_6',
+						'label' => 'Rubrik',
+						'name' => 'headline',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'none',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_7',
+						'label' => 'Text',
+						'name' => 'text',
+						'type' => 'textarea',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'br',
+					),
+					array (
+						'key' => 'field_8',
+						'label' => 'Sidlänk',
+						'name' => 'page-link',
+						'type' => 'page_link',
+						'column_width' => '',
+						'post_type' => array (
+							0 => 'post',
+							1 => 'page',
+						),
+						'allow_null' => 0,
+						'multiple' => 0,
+					),
+					array (
+						'key' => 'field_19',
+						'label' => 'Alt',
+						'name' => 'alt',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_20',
+						'label' => 'Title',
+						'name' => 'title',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => '',
+				'row_limit' => 3,
+				'layout' => 'table',
+				'button_label' => 'Add Row',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-home.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+*/
 
 ?>
